@@ -1,0 +1,67 @@
+/* Apply Google Font site-wide */
+:root {
+  --font: 'Roboto', system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+/* Background: linear gradient between #0078D7 and #00B294 (top to bottom) */
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: linear-gradient(180deg, #0078D7 0%, #00B294 100%);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Basic layout */
+header, main, footer {
+  width: 100%;
+  max-width: 960px;
+  padding: 24px;
+}
+
+h1 {
+  margin: 24px 0;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* Product image */
+.product-image {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  display: block;
+}
+
+/* Footer link: visible only on hover */
+.footer-note {
+  margin-top: 48px;
+}
+
+/* Initially hide the link text by making it transparent but reserving layout space */
+.hover-reveal {
+  color: transparent;
+  text-decoration: none;
+  border-bottom: 1px dashed transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Reveal text on hover (over the link itself) */
+.hover-reveal:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+/* Also reveal when hovering the footer area for easier discoverability */
+footer:hover .hover-reveal {
+  color: #ffffff;
+  border-color: #ffffff;
+}
